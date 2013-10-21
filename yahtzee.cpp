@@ -220,19 +220,57 @@ int main()
             }
             if ( scoresect == twos ) {
                 if ( dice1 == 2 ) {
-                    cattwos = dice1 + 2 ;
+                    cattwos = 2;
                 }
                 if ( dice2 == 2 ) {
-                    catones = dice2 + 2 ;
+                    if ( cattwos == 0 ) {
+                        cattwos = 2 ;
+                    }
+                    else if ( cattwos == 2 ) {
+                        cattwos = 4;
+                    }
                 }
                 if ( dice3 == 2 ) {
-                    cattwos = dice3 + 2 ;
+                    if ( cattwos == 0 ){
+                        cattwos = 2;
+                    }
+                    else if ( cattwos == 2 ) {
+                        cattwos = 4;
+                    }
+                    else if ( cattwos == 4 ){
+                        cattwos = 6;
+                    }
                 }
                 if ( dice4 == 2 ) {
-                    cattwos = dice4 + 2 ;
+                    if ( cattwos == 0 ){
+                        cattwos = 2 ;
+                    }
+                    else if ( cattwos == 2 ){
+                        cattwos = 4;
+                    }
+                    else if ( cattwos == 4 ){
+                        cattwos = 6;
+                    }
+                    else if ( cattwos == 6 ){
+                        cattwos == 8;
+                    }
                 }
                 if ( dice5 == 2 ) {
-                    cattwos = dice5 + 2 ;
+                    if ( cattwos == 0 ){
+                        cattwos = 2;
+                    }
+                    else if ( cattwos == 2 ){
+                        cattwos = 4;
+                    }
+                    else if ( cattwos == 4 ){
+                        cattwos = 6;
+                    }
+                    else if ( cattwos == 6 ){
+                        cattwos = 8;
+                    }
+                    else if ( cattwos == 8 ){
+                        cattwos = 10;
+                    }
                 }
             cout << cattwos << endl;
 
