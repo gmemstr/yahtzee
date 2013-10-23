@@ -9,7 +9,6 @@
 #include <stdlib.h>
 #include <stdio.h>
 #include <ctime>
-#include <math.h>
 
 using namespace std;
 
@@ -163,56 +162,56 @@ int main()
                 | strings of numbers. No obvious pattern found.        |
                 */
                 if ( dice1 == 1 ){
-                    catones = dice1;
+                    catones = 1;
                 }
-                else if ( dice2 == 1 ){
-                    if ( catones == 0 ) {
-                        catones = dice2;
-                    }
-                    else if ( catones > 1 ) {
-                            catones = dice2 + 1;
-                    }
-                }
-                else if ( dice3 == 1 ) {
+                if ( dice2 == 1 ){
                     if ( catones == 0 ) {
                         catones = 1;
                     }
-                    else if ( catones == 1 ) {
+                    if ( catones == 1 ) {
                         catones = 2;
                     }
-                    else if ( catones == 2 ){
-                        catones = 3;
-                    }
                 }
-                else if ( dice4 == 1 ) {
+                if ( dice3 == 1 ) {
                     if ( catones == 0 ) {
                         catones = 1;
                     }
-                    else if ( catones == 1 ) {
+                    if ( catones == 1 ) {
                         catones = 2;
                     }
-                    else if ( catones == 2 ) {
+                    if ( catones == 2 ){
                         catones = 3;
                     }
-                    else if ( catones == 3 ); {
-                        catones == 4;
-                    }
                 }
-                else if ( dice5 == 1) {
+                if ( dice4 == 1 ) {
                     if ( catones == 0 ) {
                         catones = 1;
                     }
-                    else if ( catones == 1 ) {
+                    if ( catones == 1 ) {
                         catones = 2;
                     }
-                    else if ( catones == 2 ) {
+                    if ( catones == 2 ) {
                         catones = 3;
                     }
-                    else if ( catones == 3) {
+                    if ( catones == 3 ); {
                         catones = 4;
                     }
-                    else if ( catones == 4 ){
-                        catones == 5;
+                }
+                if ( dice5 == 1) {
+                    if ( catones == 0 ) {
+                        catones = 1;
+                    }
+                    if ( catones == 1 ) {
+                        catones = 2;
+                    }
+                    if ( catones == 2 ) {
+                        catones = 3;
+                    }
+                    if ( catones == 3) {
+                        catones = 4;
+                    }
+                    if ( catones == 4 ){
+                        catones = 5;
                     }
                 }
             cout << catones << endl;
@@ -226,7 +225,7 @@ int main()
                     if ( cattwos == 0 ) {
                         cattwos = 2 ;
                     }
-                    else if ( cattwos == 2 ) {
+                    if ( cattwos == 2 ) {
                         cattwos = 4;
                     }
                 }
@@ -234,10 +233,10 @@ int main()
                     if ( cattwos == 0 ){
                         cattwos = 2;
                     }
-                    else if ( cattwos == 2 ) {
+                    if ( cattwos == 2 ) {
                         cattwos = 4;
                     }
-                    else if ( cattwos == 4 ){
+                    if ( cattwos == 4 ){
                         cattwos = 6;
                     }
                 }
@@ -245,30 +244,30 @@ int main()
                     if ( cattwos == 0 ){
                         cattwos = 2 ;
                     }
-                    else if ( cattwos == 2 ){
+                    if ( cattwos == 2 ){
                         cattwos = 4;
                     }
-                    else if ( cattwos == 4 ){
+                    if ( cattwos == 4 ){
                         cattwos = 6;
                     }
-                    else if ( cattwos == 6 ){
-                        cattwos == 8;
+                    if ( cattwos == 6 ){
+                        cattwos = 8;
                     }
                 }
                 if ( dice5 == 2 ) {
                     if ( cattwos == 0 ){
                         cattwos = 2;
                     }
-                    else if ( cattwos == 2 ){
+                    if ( cattwos == 2 ){
                         cattwos = 4;
                     }
-                    else if ( cattwos == 4 ){
+                    if ( cattwos == 4 ){
                         cattwos = 6;
                     }
-                    else if ( cattwos == 6 ){
+                    if ( cattwos == 6 ){
                         cattwos = 8;
                     }
-                    else if ( cattwos == 8 ){
+                    if ( cattwos == 8 ){
                         cattwos = 10;
                     }
                 }
@@ -277,19 +276,56 @@ int main()
             }
             if ( scoresect == threes ){
                 if ( dice1 == 3 ) {
-                    catthrees = dice1 + 3 ;
+                    if ( catthrees == 0 ) {
+                        catthrees = 3;
+                    }
                 }
                 if ( dice2 == 3 ) {
-                    catthrees = dice2 + 3 ;
+                    if ( catthrees == 0 ){
+                        catthrees = 3;
+                    }
+                    if ( catthrees == 3 ){
+                        catthrees = 6;
+                    }
                 }
                 if ( dice3 == 3 ) {
-                    catthrees = dice3 + 3 ;
+                    if ( catthrees == 0 ){
+                        catthrees = 3;
+                    }
+                    if ( catthrees == 3 ) {
+                        catthrees = 6;
+                    }
+                    if ( catthrees == 6 ){
+                        catthrees = 9;
+                    }
                 }
                 if ( dice4 == 3 ) {
-                    catthrees = dice4 + 3 ;
+                    if ( catthrees == 0 ){
+                        catthrees = 3;
+                    }
+                    if ( catthrees == 3 ){
+                        catthrees = 6;
+                    }
+                    if ( catthrees == 9 ){
+                        catthrees = 12;
+                    }
                 }
                 if ( dice5 == 3 ) {
-                    catthrees = dice5 + 3 ;
+                    if ( catthrees == 0 ) {
+                        catthrees = 3;
+                    }
+                    if ( catthrees == 3 ){
+                        catthrees = 6;
+                    }
+                    if ( catthrees == 6 ){
+                        catthrees = 9;
+                    }
+                    if ( catthrees == 9 ) {
+                        catthrees = 12;
+                    }
+                    if ( catthrees == 12){
+                        catthrees = 15;
+                    }
                 }
             cout << catthrees << endl;
 
