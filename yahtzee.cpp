@@ -164,79 +164,79 @@ int main()
                 if ( dice1 == 1 ){
                     catones = 1;
                 }
-                if ( dice2 == 1 ){
+                else if ( dice2 == 1 ){
                     if ( catones == 0 ) {
                         catones = 1;
                     }
-                    if ( catones == 1 ) {
+                    else if ( catones == 1 ) {
                         catones = 2;
                     }
                 }
-                if ( dice3 == 1 ) {
+                else if ( dice3 == 1 ) {
                     if ( catones == 0 ) {
                         catones = 1;
                     }
-                    if ( catones == 1 ) {
+                    else if ( catones == 1 ) {
                         catones = 2;
                     }
-                    if ( catones == 2 ){
+                    else if ( catones == 2 ){
                         catones = 3;
                     }
                 }
-                if ( dice4 == 1 ) {
+                else if ( dice4 == 1 ) {
                     if ( catones == 0 ) {
                         catones = 1;
                     }
-                    if ( catones == 1 ) {
+                    else if ( catones == 1 ) {
                         catones = 2;
                     }
-                    if ( catones == 2 ) {
+                    else if ( catones == 2 ) {
                         catones = 3;
                     }
-                    if ( catones == 3 ); {
+                    else if ( catones == 3 ); {
                         catones = 4;
                     }
                 }
-                if ( dice5 == 1) {
+                else if ( dice5 == 1) {
                     if ( catones == 0 ) {
                         catones = 1;
                     }
-                    if ( catones == 1 ) {
+                    else if ( catones == 1 ) {
                         catones = 2;
                     }
-                    if ( catones == 2 ) {
+                    else if ( catones == 2 ) {
                         catones = 3;
                     }
-                    if ( catones == 3) {
+                    else if ( catones == 3) {
                         catones = 4;
                     }
-                    if ( catones == 4 ){
+                    else if ( catones == 4 ){
                         catones = 5;
                     }
                 }
             cout << catones << endl;
 
             }
-            if ( scoresect == twos ) {
+            else if ( scoresect == twos ) {
                 if ( dice1 == 2 ) {
                     cattwos = 2;
                 }
-                if ( dice2 == 2 ) {
+                else if ( dice2 == 2 ) {
                     if ( cattwos == 0 ) {
                         cattwos = 2 ;
                     }
-                    if ( cattwos == 2 ) {
+                    else if ( cattwos == 2 ) {
                         cattwos = 4;
                     }
                 }
-                if ( dice3 == 2 ) {
+                else if ( dice3 == 2 ) {
                     if ( cattwos == 0 ){
                         cattwos = 2;
                     }
-                    if ( cattwos == 2 ) {
+                    else if ( cattwos == 2 ) {
                         cattwos = 4;
                     }
-                    if ( cattwos == 4 ){
+                    else if ( cattwos == 4 ){
                         cattwos = 6;
                     }
                 }
@@ -244,13 +244,13 @@ int main()
                     if ( cattwos == 0 ){
                         cattwos = 2 ;
                     }
-                    if ( cattwos == 2 ){
+                    else if ( cattwos == 2 ){
                         cattwos = 4;
                     }
-                    if ( cattwos == 4 ){
+                    else if ( cattwos == 4 ){
                         cattwos = 6;
                     }
-                    if ( cattwos == 6 ){
+                    else if ( cattwos == 6 ){
                         cattwos = 8;
                     }
                 }
@@ -258,16 +258,16 @@ int main()
                     if ( cattwos == 0 ){
                         cattwos = 2;
                     }
-                    if ( cattwos == 2 ){
+                    else if ( cattwos == 2 ){
                         cattwos = 4;
                     }
-                    if ( cattwos == 4 ){
+                    else if ( cattwos == 4 ){
                         cattwos = 6;
                     }
-                    if ( cattwos == 6 ){
+                    else if ( cattwos == 6 ){
                         cattwos = 8;
                     }
-                    if ( cattwos == 8 ){
+                    else if ( cattwos == 8 ){
                         cattwos = 10;
                     }
                 }
@@ -276,116 +276,225 @@ int main()
             }
             if ( scoresect == threes ){
                 if ( dice1 == 3 ) {
-                    if ( catthrees == 0 ) {
                         catthrees = 3;
                     }
-                }
-                if ( dice2 == 3 ) {
+                else if ( dice2 == 3 ) {
                     if ( catthrees == 0 ){
                         catthrees = 3;
                     }
-                    if ( catthrees == 3 ){
+                    else if ( catthrees == 3 ){
                         catthrees = 6;
                     }
                 }
-                if ( dice3 == 3 ) {
+                else if ( dice3 == 3 ) {
                     if ( catthrees == 0 ){
                         catthrees = 3;
                     }
-                    if ( catthrees == 3 ) {
+                    else if ( catthrees == 3 ) {
                         catthrees = 6;
                     }
-                    if ( catthrees == 6 ){
+                    else if ( catthrees == 6 ){
                         catthrees = 9;
                     }
                 }
-                if ( dice4 == 3 ) {
+                else if ( dice4 == 3 ) {
                     if ( catthrees == 0 ){
                         catthrees = 3;
                     }
-                    if ( catthrees == 3 ){
+                    else if ( catthrees == 3 ){
                         catthrees = 6;
                     }
-                    if ( catthrees == 9 ){
+                    else if ( catthrees == 9 ){
                         catthrees = 12;
                     }
                 }
-                if ( dice5 == 3 ) {
+                else if ( dice5 == 3 ) {
                     if ( catthrees == 0 ) {
                         catthrees = 3;
                     }
-                    if ( catthrees == 3 ){
+                    else if ( catthrees == 3 ){
                         catthrees = 6;
                     }
-                    if ( catthrees == 6 ){
+                    else if ( catthrees == 6 ){
                         catthrees = 9;
                     }
-                    if ( catthrees == 9 ) {
+                    else if ( catthrees == 9 ) {
                         catthrees = 12;
                     }
-                    if ( catthrees == 12){
+                    else if ( catthrees == 12){
                         catthrees = 15;
                     }
                 }
             cout << catthrees << endl;
+        }
 
-            }
-            if ( scoresect == fours ) {
+            else if ( scoresect == fours ) {
                 if ( dice1 == 4 ) {
                     catfours = 4 ;
                 }
-                if ( dice2 == 4 ) {
-                    catfours = dice2 + 4 ;
+                else if ( dice2 == 4 ) {
+                    if ( catfours == 0 ){
+                        catfours = 4;
+                    }
+                    else if ( catfours == 4 ){
+                        catfours = 8;
+                    }
                 }
-                if ( dice3 == 4 ) {
-                    catfours = catfours + 4 ;
+                else if ( dice3 == 4 ) {
+                    if ( catfours == 0 ){
+                         catfours = 4;
+                    }
+                    else if ( catfours == 4 ){
+                        catfours = 8;
+                    }
+                    else if ( catfours == 8 ){
+                        catfours = 12;
+                    }
                 }
-                if ( dice4 == 4 ) {
-                    catfours = catfours + 4 ;
+                else if ( dice4 == 4 ) {
+                    if ( catfours == 0 ){
+                        catfours = 4;
+                    }
+                    else if ( catfours == 4 ){
+                        catfours = 8;
+                    }
+                    else if ( catfours == 8 ){
+                        catfours = 12;
+                    }
+                    else if  ( catfours == 12 ){
+                        catfours == 16;
+                    }
                 }
-                if ( dice5 == 4 ) {
-                    catfours = catfours + 4 ;
+                else if ( dice5 == 4 ) {
+                    if ( catfours == 0 ){
+                        catfours = 4;
+                    }
+                    else if ( catfours == 4 ){
+                        catfours = 8;
+                    }
+                    else if ( catfours == 8 ){
+                        catfours = 12;
+                    }
+                    else if ( catfours == 12 ){
+                        catfours = 16;
+                    }
+                    else if ( catfours == 16 ){
+                        catfours = 20;
+                    }
                 }
             cout << catfours << endl;
 
             }
-            if ( scoresect == fives ) {
+            else if ( scoresect == fives ) {
                 if ( dice1 == 5 ) {
-                    catfives = catfives + 5 ;
+                    catfives = 5;
                 }
-                if ( dice2 == 5 ) {
-                    catfives = catfives + 5 ;
+                else if ( dice2 == 5 ) {
+                    if ( catfives == 0 ){
+                        catfives = 0;
+                    }
+                    else if ( catfives == 5 ){
+                        catfives = 10;
+                    }
                 }
-                if ( dice2 == 5 ) {
-                    catfives = catfives + 5 ;
+                else if ( dice3 == 5 ) {
+                    if ( catfives == 0 ){
+                        catfives = 5;
+                    }
+                    else if ( catfives == 5 ){
+                        catfives = 10;
+                    }
+                    else if ( catfives == 10 ){
+                        catfives = 15;
+                    }
                 }
-                if ( dice3 == 5 ) {
-                    catfives = catfives + 5 ;
+                else if ( dice4 == 5 ) {
+                    if ( catfives == 0 ){
+                        catfives = 5;
+                    }
+                    else if ( catfives == 5 ){
+                        catfives = 10;
+                    }
+                    else if ( catfives == 10 ){
+                        catfives = 15;
+                    }
+                    else if ( catfives == 15 ){
+                        catfives = 20;
+                    }
                 }
-                if ( dice4 == 5 ) {
-                    catfives = catfives + 5 ;
-                }
-                if ( dice5 == 5 ) {
-                    catfives = catfives + 5 ;
+                else if ( dice5 == 5 ) {
+                    if ( catfives == 0 ){
+                        catfives = 5;
+                    }
+                    else if ( catfives == 5 ){
+                        catfives = 10;
+                    }
+                    else if ( catfives == 10 ){
+                        catfives = 15;
+                    }
+                    else if ( catfives == 15 ){
+                        catfives = 20;
+                    }
+                    else if ( catfives == 20 ){
+                        catfives = 25;
+                    }
                 }
             cout << catfives << endl;
 
             }
-            if ( scoresect == sixes ) {
+            else if ( scoresect == sixes ) {
                 if ( dice1 == 6 ) {
-                    catsixes = catsixes + 6 ;
+                    catsixes = 6;
                 }
-                if ( dice2 == 6 ){
-                    catsixes = catsixes + 6 ;
+                else if ( dice2 == 6 ){
+                    if ( catsixes == 0 ){
+                        catsixes = 6;
+                    }
+                    else if ( catsixes == 6 ){
+                        catsixes = 12;
+                    }
                 }
-                if ( dice3 == 6 ) {
-                    catsixes = catsixes + 6 ;
+                else if ( dice3 == 6 ) {
+                    if ( catsixes == 0 ){
+                        catsixes = 6;
+                    }
+                    else if ( catsixes == 6 ){
+                        catsixes = 12;
+                    }
+                    else if ( catsixes == 12 ){
+                        catsixes = 18;
+                    }
                 }
-                if ( dice4 == 6 ) {
-                    catsixes = catsixes + 6 ;
+                else if ( dice4 == 6 ) {
+                    if ( catsixes == 0 ){
+                        catsixes == 6;
+                    }
+                    else if ( catsixes == 6 ){
+                        catsixes = 12;
+                    }
+                    else if ( catsixes == 12 ){
+                        catsixes = 18;
+                    }
+                    else if ( catsixes == 18 ){
+                        catsixes = 24;
+                    }
                 }
-                if ( dice5 == 6 ) {
-                    catsixes = catsixes + 6 ;
+                else if ( dice5 == 6 ) {
+                    if ( catsixes == 0 ){
+                        catsixes = 6;
+                    }
+                    else if ( catsixes == 6 ){
+                        catsixes = 12;
+                    }
+                    else if ( catsixes == 12 ){
+                        catsixes = 18;
+                    }
+                    else if ( catsixes == 18 ){
+                        catsixes = 24;
+                    }
+                    else if ( catsixes == 24 ){
+                        catsixes = 30;
+                    }
                 }
             cout << catsixes << endl;
             }
