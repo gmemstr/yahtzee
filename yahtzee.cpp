@@ -164,7 +164,7 @@ int main()
                 if ( dice1 == 1 ){
                     catones = 1;
                 }
-                else if ( dice2 == 1 ){
+                if ( dice2 == 1 ){
                     if ( catones == 0 ) {
                         catones = 1;
                     }
@@ -172,7 +172,7 @@ int main()
                         catones = 2;
                     }
                 }
-                else if ( dice3 == 1 ) {
+                if ( dice3 == 1 ) {
                     if ( catones == 0 ) {
                         catones = 1;
                     }
@@ -183,7 +183,7 @@ int main()
                         catones = 3;
                     }
                 }
-                else if ( dice4 == 1 ) {
+                if ( dice4 == 1 ) {
                     if ( catones == 0 ) {
                         catones = 1;
                     }
@@ -197,7 +197,7 @@ int main()
                         catones = 4;
                     }
                 }
-                else if ( dice5 == 1) {
+                if ( dice5 == 1) {
                     if ( catones == 0 ) {
                         catones = 1;
                     }
@@ -221,7 +221,7 @@ int main()
                 if ( dice1 == 2 ) {
                     cattwos = 2;
                 }
-                else if ( dice2 == 2 ) {
+                if ( dice2 == 2 ) {
                     if ( cattwos == 0 ) {
                         cattwos = 2 ;
                     }
@@ -229,7 +229,7 @@ int main()
                         cattwos = 4;
                     }
                 }
-                else if ( dice3 == 2 ) {
+                if ( dice3 == 2 ) {
                     if ( cattwos == 0 ){
                         cattwos = 2;
                     }
@@ -278,7 +278,7 @@ int main()
                 if ( dice1 == 3 ) {
                         catthrees = 3;
                     }
-                else if ( dice2 == 3 ) {
+                if ( dice2 == 3 ) {
                     if ( catthrees == 0 ){
                         catthrees = 3;
                     }
@@ -286,7 +286,7 @@ int main()
                         catthrees = 6;
                     }
                 }
-                else if ( dice3 == 3 ) {
+                if ( dice3 == 3 ) {
                     if ( catthrees == 0 ){
                         catthrees = 3;
                     }
@@ -297,7 +297,7 @@ int main()
                         catthrees = 9;
                     }
                 }
-                else if ( dice4 == 3 ) {
+                if ( dice4 == 3 ) {
                     if ( catthrees == 0 ){
                         catthrees = 3;
                     }
@@ -308,7 +308,7 @@ int main()
                         catthrees = 12;
                     }
                 }
-                else if ( dice5 == 3 ) {
+                if ( dice5 == 3 ) {
                     if ( catthrees == 0 ) {
                         catthrees = 3;
                     }
@@ -332,7 +332,7 @@ int main()
                 if ( dice1 == 4 ) {
                     catfours = 4 ;
                 }
-                else if ( dice2 == 4 ) {
+                if ( dice2 == 4 ) {
                     if ( catfours == 0 ){
                         catfours = 4;
                     }
@@ -340,7 +340,7 @@ int main()
                         catfours = 8;
                     }
                 }
-                else if ( dice3 == 4 ) {
+                if ( dice3 == 4 ) {
                     if ( catfours == 0 ){
                          catfours = 4;
                     }
@@ -351,7 +351,7 @@ int main()
                         catfours = 12;
                     }
                 }
-                else if ( dice4 == 4 ) {
+                if ( dice4 == 4 ) {
                     if ( catfours == 0 ){
                         catfours = 4;
                     }
@@ -365,7 +365,7 @@ int main()
                         catfours == 16;
                     }
                 }
-                else if ( dice5 == 4 ) {
+                if ( dice5 == 4 ) {
                     if ( catfours == 0 ){
                         catfours = 4;
                     }
@@ -389,7 +389,7 @@ int main()
                 if ( dice1 == 5 ) {
                     catfives = 5;
                 }
-                else if ( dice2 == 5 ) {
+                if ( dice2 == 5 ) {
                     if ( catfives == 0 ){
                         catfives = 0;
                     }
@@ -397,7 +397,7 @@ int main()
                         catfives = 10;
                     }
                 }
-                else if ( dice3 == 5 ) {
+                if ( dice3 == 5 ) {
                     if ( catfives == 0 ){
                         catfives = 5;
                     }
@@ -408,7 +408,7 @@ int main()
                         catfives = 15;
                     }
                 }
-                else if ( dice4 == 5 ) {
+                if ( dice4 == 5 ) {
                     if ( catfives == 0 ){
                         catfives = 5;
                     }
@@ -422,7 +422,7 @@ int main()
                         catfives = 20;
                     }
                 }
-                else if ( dice5 == 5 ) {
+                if ( dice5 == 5 ) {
                     if ( catfives == 0 ){
                         catfives = 5;
                     }
@@ -446,7 +446,7 @@ int main()
                 if ( dice1 == 6 ) {
                     catsixes = 6;
                 }
-                else if ( dice2 == 6 ){
+                if ( dice2 == 6 ){
                     if ( catsixes == 0 ){
                         catsixes = 6;
                     }
@@ -454,7 +454,7 @@ int main()
                         catsixes = 12;
                     }
                 }
-                else if ( dice3 == 6 ) {
+                if ( dice3 == 6 ) {
                     if ( catsixes == 0 ){
                         catsixes = 6;
                     }
@@ -465,7 +465,7 @@ int main()
                         catsixes = 18;
                     }
                 }
-                else if ( dice4 == 6 ) {
+                if ( dice4 == 6 ) {
                     if ( catsixes == 0 ){
                         catsixes == 6;
                     }
@@ -479,7 +479,7 @@ int main()
                         catsixes = 24;
                     }
                 }
-                else if ( dice5 == 6 ) {
+                if ( dice5 == 6 ) {
                     if ( catsixes == 0 ){
                         catsixes = 6;
                     }
