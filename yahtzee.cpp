@@ -40,6 +40,12 @@ int main()
     int allowedtoroll4;
     int allowedtoroll5;
     int loopbreak;
+    int canUsecatones = 0;
+    int canUsecattwos = 0;
+    int canUsecatthrees = 0;
+    int canUsecatfours = 0;
+    int canUsecatfives = 0;
+    int canUsecatsixes = 0;
     int catlocked1 = 0;
     int catlocked2 = 0;
     int catlocked3 = 0;
@@ -154,125 +160,33 @@ int main()
             string sixes = "sixes";
             string scoresect;
             cin >> scoresect; //Choice strings
-            if ( scoresect == aces ) {
-                /*
-                | The following code is messy.                         |
-                | It basically is supposed to calculate the value for  |
-                | each category. However, it seems to produce random   |
-                | strings of numbers. No obvious pattern found.        |
-                */
-                if ( dice1 == 1 ){
-                    catones = 1;
+            if ( scoresect == aces ) { //Thanks to Mr. Last for the help with the catagories!
+                if ( canUsecatones == 0 ){
+                    catones=0;
+                    if (dice1==1) catones++;
+                    if (dice2==1) catones++;
+                    if (dice3==1) catones++;
+                    if (dice4==1) catones++;
+                    if (dice5==1) catones++;
+                    cout << catones << endl;
+                    canUsecatones++;
                 }
-                if ( dice2 == 1 ){
-                    if ( catones == 0 ) {
-                        catones = 1;
-                    }
-                    else if ( catones == 1 ) {
-                        catones = 2;
-                    }
+                else if ( canUsecatones > 1 ){
+                    cout << "You've already used that catagory!" << endl;
                 }
-                if ( dice3 == 1 ) {
-                    if ( catones == 0 ) {
-                        catones = 1;
-                    }
-                    else if ( catones == 1 ) {
-                        catones = 2;
-                    }
-                    else if ( catones == 2 ){
-                        catones = 3;
-                    }
-                }
-                if ( dice4 == 1 ) {
-                    if ( catones == 0 ) {
-                        catones = 1;
-                    }
-                    else if ( catones == 1 ) {
-                        catones = 2;
-                    }
-                    else if ( catones == 2 ) {
-                        catones = 3;
-                    }
-                    else if ( catones == 3 ); {
-                        catones = 4;
-                    }
-                }
-                if ( dice5 == 1) {
-                    if ( catones == 0 ) {
-                        catones = 1;
-                    }
-                    else if ( catones == 1 ) {
-                        catones = 2;
-                    }
-                    else if ( catones == 2 ) {
-                        catones = 3;
-                    }
-                    else if ( catones == 3) {
-                        catones = 4;
-                    }
-                    else if ( catones == 4 ){
-                        catones = 5;
-                    }
-                }
-            cout << catones << endl;
 
             }
             else if ( scoresect == twos ) {
-                if ( dice1 == 2 ) {
-                    cattwos = 2;
+                if ( canUsecattwos == 0 ){
+                cattwos=0;
+                    if (dice1==2) cattwos=cattwos+2;
+                    if (dice2==2) cattwos=cattwos+2;
+                    if (dice3==2) cattwos=cattwos+2;
+                    if (dice4==2) cattwos=cattwos+2;
+                    if (dice5==2) cattwos=cattwos+2;
+                    cout << cattwos << endl;
+                    canUsecattwos++;
                 }
-                if ( dice2 == 2 ) {
-                    if ( cattwos == 0 ) {
-                        cattwos = 2 ;
-                    }
-                    else if ( cattwos == 2 ) {
-                        cattwos = 4;
-                    }
-                }
-                if ( dice3 == 2 ) {
-                    if ( cattwos == 0 ){
-                        cattwos = 2;
-                    }
-                    else if ( cattwos == 2 ) {
-                        cattwos = 4;
-                    }
-                    else if ( cattwos == 4 ){
-                        cattwos = 6;
-                    }
-                }
-                if ( dice4 == 2 ) {
-                    if ( cattwos == 0 ){
-                        cattwos = 2 ;
-                    }
-                    else if ( cattwos == 2 ){
-                        cattwos = 4;
-                    }
-                    else if ( cattwos == 4 ){
-                        cattwos = 6;
-                    }
-                    else if ( cattwos == 6 ){
-                        cattwos = 8;
-                    }
-                }
-                if ( dice5 == 2 ) {
-                    if ( cattwos == 0 ){
-                        cattwos = 2;
-                    }
-                    else if ( cattwos == 2 ){
-                        cattwos = 4;
-                    }
-                    else if ( cattwos == 4 ){
-                        cattwos = 6;
-                    }
-                    else if ( cattwos == 6 ){
-                        cattwos = 8;
-                    }
-                    else if ( cattwos == 8 ){
-                        cattwos = 10;
-                    }
-                }
-            cout << cattwos << endl;
-
             }
             if ( scoresect == threes ){
                 if ( dice1 == 3 ) {
@@ -362,7 +276,7 @@ int main()
                         catfours = 12;
                     }
                     else if  ( catfours == 12 ){
-                        catfours == 16;
+                        catfours = 16;
                     }
                 }
                 if ( dice5 == 4 ) {
