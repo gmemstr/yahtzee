@@ -171,14 +171,14 @@ int main()
                     cout << catones << endl;
                     canUsecatones++;
                 }
-                else if ( canUsecatones > 1 ){
+                else if ( canUsecatones > 0 ){
                     cout << "You've already used that catagory!" << endl;
                 }
 
             }
             else if ( scoresect == twos ) {
                 if ( canUsecattwos == 0 ){
-                cattwos=0;
+                    cattwos=0;
                     if (dice1==2) cattwos=cattwos+2;
                     if (dice2==2) cattwos=cattwos+2;
                     if (dice3==2) cattwos=cattwos+2;
@@ -187,230 +187,67 @@ int main()
                     cout << cattwos << endl;
                     canUsecattwos++;
                 }
+                else if ( canUsecattwos > 0 ){
+                    cout << "You've already used this catagory!" << endl;
+                }
             }
             if ( scoresect == threes ){
-                if ( dice1 == 3 ) {
-                        catthrees = 3;
-                    }
-                if ( dice2 == 3 ) {
-                    if ( catthrees == 0 ){
-                        catthrees = 3;
-                    }
-                    else if ( catthrees == 3 ){
-                        catthrees = 6;
-                    }
+                if ( canUsecatthrees == 0 ){
+                    catthrees=0;
+                    if (dice1==3) catthrees=catthrees+3;
+                    if (dice2==3) catthrees=catthrees+3;
+                    if (dice3==3) catthrees=catthrees+3;
+                    if (dice4==3) catthrees=catthrees+3;
+                    if (dice5==3) catthrees=catthrees+3;
+                    cout << catthrees << endl;
+                    canUsecatthrees++;
                 }
-                if ( dice3 == 3 ) {
-                    if ( catthrees == 0 ){
-                        catthrees = 3;
-                    }
-                    else if ( catthrees == 3 ) {
-                        catthrees = 6;
-                    }
-                    else if ( catthrees == 6 ){
-                        catthrees = 9;
-                    }
+                else if ( canUsecatthrees > 0 ){
+                    cout << "You've already used this catagory!" << endl;
                 }
-                if ( dice4 == 3 ) {
-                    if ( catthrees == 0 ){
-                        catthrees = 3;
-                    }
-                    else if ( catthrees == 3 ){
-                        catthrees = 6;
-                    }
-                    else if ( catthrees == 9 ){
-                        catthrees = 12;
-                    }
-                }
-                if ( dice5 == 3 ) {
-                    if ( catthrees == 0 ) {
-                        catthrees = 3;
-                    }
-                    else if ( catthrees == 3 ){
-                        catthrees = 6;
-                    }
-                    else if ( catthrees == 6 ){
-                        catthrees = 9;
-                    }
-                    else if ( catthrees == 9 ) {
-                        catthrees = 12;
-                    }
-                    else if ( catthrees == 12){
-                        catthrees = 15;
-                    }
-                }
-            cout << catthrees << endl;
-        }
+            }
 
             else if ( scoresect == fours ) {
-                if ( dice1 == 4 ) {
-                    catfours = 4 ;
+                if ( canUsecatfours == 0 ){
+                    catfours=0;
+                    if (dice1==4) catfours=catfours+4;
+                    if (dice2==4) catfours=catfours+4;
+                    if (dice3==4) catfours=catfours+4;
+                    if (dice4==4) catfours=catfours+4;
+                    if (dice5==4) catfours=catfours+4;
+                    cout << catfours << endl;
+                    canUsecatfours++;
                 }
-                if ( dice2 == 4 ) {
-                    if ( catfours == 0 ){
-                        catfours = 4;
-                    }
-                    else if ( catfours == 4 ){
-                        catfours = 8;
-                    }
+                else if ( canUsecatfours > 0 ){
+                    cout << "You've already used this catagory!" << endl;
                 }
-                if ( dice3 == 4 ) {
-                    if ( catfours == 0 ){
-                         catfours = 4;
-                    }
-                    else if ( catfours == 4 ){
-                        catfours = 8;
-                    }
-                    else if ( catfours == 8 ){
-                        catfours = 12;
-                    }
-                }
-                if ( dice4 == 4 ) {
-                    if ( catfours == 0 ){
-                        catfours = 4;
-                    }
-                    else if ( catfours == 4 ){
-                        catfours = 8;
-                    }
-                    else if ( catfours == 8 ){
-                        catfours = 12;
-                    }
-                    else if  ( catfours == 12 ){
-                        catfours = 16;
-                    }
-                }
-                if ( dice5 == 4 ) {
-                    if ( catfours == 0 ){
-                        catfours = 4;
-                    }
-                    else if ( catfours == 4 ){
-                        catfours = 8;
-                    }
-                    else if ( catfours == 8 ){
-                        catfours = 12;
-                    }
-                    else if ( catfours == 12 ){
-                        catfours = 16;
-                    }
-                    else if ( catfours == 16 ){
-                        catfours = 20;
-                    }
-                }
-            cout << catfours << endl;
-
             }
             else if ( scoresect == fives ) {
-                if ( dice1 == 5 ) {
-                    catfives = 5;
+                if ( canUsecatfives == 0 ){
+                    if (dice1==5) catfives=catfives+5;
+                    if (dice2==5) catfives=catfives+5;
+                    if (dice3==5) catfives=catfives+5;
+                    if (dice4==5) catfives=catfives+5;
+                    if (dice5==5) catfives=catfives+5;
+                    cout << catfives << endl;
                 }
-                if ( dice2 == 5 ) {
-                    if ( catfives == 0 ){
-                        catfives = 0;
-                    }
-                    else if ( catfives == 5 ){
-                        catfives = 10;
-                    }
+                else if ( canUsecatfives > 0 ){
+                    cout << "You've already used this catagory!" << endl;
                 }
-                if ( dice3 == 5 ) {
-                    if ( catfives == 0 ){
-                        catfives = 5;
-                    }
-                    else if ( catfives == 5 ){
-                        catfives = 10;
-                    }
-                    else if ( catfives == 10 ){
-                        catfives = 15;
-                    }
-                }
-                if ( dice4 == 5 ) {
-                    if ( catfives == 0 ){
-                        catfives = 5;
-                    }
-                    else if ( catfives == 5 ){
-                        catfives = 10;
-                    }
-                    else if ( catfives == 10 ){
-                        catfives = 15;
-                    }
-                    else if ( catfives == 15 ){
-                        catfives = 20;
-                    }
-                }
-                if ( dice5 == 5 ) {
-                    if ( catfives == 0 ){
-                        catfives = 5;
-                    }
-                    else if ( catfives == 5 ){
-                        catfives = 10;
-                    }
-                    else if ( catfives == 10 ){
-                        catfives = 15;
-                    }
-                    else if ( catfives == 15 ){
-                        catfives = 20;
-                    }
-                    else if ( catfives == 20 ){
-                        catfives = 25;
-                    }
-                }
-            cout << catfives << endl;
 
             }
             else if ( scoresect == sixes ) {
-                if ( dice1 == 6 ) {
-                    catsixes = 6;
-                }
-                if ( dice2 == 6 ){
-                    if ( catsixes == 0 ){
-                        catsixes = 6;
-                    }
-                    else if ( catsixes == 6 ){
-                        catsixes = 12;
-                    }
-                }
-                if ( dice3 == 6 ) {
-                    if ( catsixes == 0 ){
-                        catsixes = 6;
-                    }
-                    else if ( catsixes == 6 ){
-                        catsixes = 12;
-                    }
-                    else if ( catsixes == 12 ){
-                        catsixes = 18;
-                    }
-                }
-                if ( dice4 == 6 ) {
-                    if ( catsixes == 0 ){
-                        catsixes == 6;
-                    }
-                    else if ( catsixes == 6 ){
-                        catsixes = 12;
-                    }
-                    else if ( catsixes == 12 ){
-                        catsixes = 18;
-                    }
-                    else if ( catsixes == 18 ){
-                        catsixes = 24;
-                    }
-                }
-                if ( dice5 == 6 ) {
-                    if ( catsixes == 0 ){
-                        catsixes = 6;
-                    }
-                    else if ( catsixes == 6 ){
-                        catsixes = 12;
-                    }
-                    else if ( catsixes == 12 ){
-                        catsixes = 18;
-                    }
-                    else if ( catsixes == 18 ){
-                        catsixes = 24;
-                    }
-                    else if ( catsixes == 24 ){
-                        catsixes = 30;
-                    }
-                }
+                if ( canUsecatsixes == 0 ){
+                    if (dice1==6) catsixes=catsixes+6;
+                    if (dice2==6) catsixes=catsixes+6;
+                    if (dice3==6) catsixes=catsixes+6;
+                    if (dice4==6) catsixes=catsixes+6;
+                    if (dice5==6) catsixes=catsixes+6;
             cout << catsixes << endl;
+                }
+            else if ( canUsecatsixes == 0 ){
+                cout << "You've already used this catagory!" << endl;
+                }
             }
         }
     }
