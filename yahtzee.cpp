@@ -34,11 +34,11 @@ int main()
     int catsixes;
     int cattotal;
     int catbonus;
-    int allowedtoroll1;
-    int allowedtoroll2;
-    int allowedtoroll3;
-    int allowedtoroll4;
-    int allowedtoroll5;
+    int allowedtoroll1 = 0;
+    int allowedtoroll2 = 0;
+    int allowedtoroll3 = 0;
+    int allowedtoroll4 = 0;
+    int allowedtoroll5 = 0;
     int loopbreak;
     int canUsecatones = 0;
     int canUsecattwos = 0;
@@ -53,11 +53,9 @@ int main()
     int catlocked5 = 0;
     int catlocked6 = 0;
     loopbreak = 0;
-    allowedtoroll1 = 0;
-    allowedtoroll2 = 0;
-    allowedtoroll3 = 0;
-    allowedtoroll4 = 0;
-    allowedtoroll5 = 0; //Declares all variables needed
+    string diceorcal; //Declares all variables needed
+    while ( loopbreak != 1 ) {
+    cout << " " << endl;
     cout << "Rolling for round." << endl;
     //Random numbers occur here
     dice1 = (1 + rand() % 6);
@@ -75,70 +73,71 @@ int main()
     cout << " ";
     cout << dice5 << endl ;
     int rerolldice;
-    while ( loopbreak != 1 ) {
-        cout << "Reroll which dice?" << endl;
-        cout << "Enter 8 to score current roll or 9 to continue to next round." << endl;
-        cout << "Dice ";
-        cin >> rerolldice; //Make new random numbers if dice is chosen, 9 is exit, 8 is calculate score
-        if ( rerolldice == 1 ) {
-                if ( allowedtoroll1 < 2 ) { //So that you can only roll twice
-                    dice1 = (1 + rand() % 6 );
-                    cout << "Dice One: ";
-                    cout << dice1 << endl;
-                    allowedtoroll1 = allowedtoroll1++;
-            }
-            else {
-                cout << "You can not roll that dice any more." << endl;
-                cout << " " << endl;
-            }
-        }
-        if ( rerolldice == 2 ) {
-                if ( allowedtoroll2 < 2 ) {
-                    dice2 = ( 1 + rand() % 6 );
-                    cout << "Dice Two: ";
-                    cout << dice2 << endl;
-                    allowedtoroll2 = allowedtoroll2++;
+        cout << "Use reroll to reroll a dice, or calculate to add up score (exit to exit)." << endl;
+        cin >> diceorcal; //Make new random numbers if dice is chosen, 9 is exit, 8 is calculate score
+        if ( diceorcal == "reroll" ){
+            cout << "Dice to reroll: ";
+            cin >> rerolldice;
+            if ( rerolldice == 1 ) {
+                    if ( allowedtoroll1 < 2 ) { //So that you can only roll twice
+                        dice1 = (1 + rand() % 6 );
+                        cout << "Dice One: ";
+                        cout << dice1 << endl;
+                        allowedtoroll1 = allowedtoroll1++;
                 }
-            else {
-                cout << "You can not roll that dice any more" << endl;
-                cout << " " << endl;
+                else {
+                    cout << "You can not roll that dice any more." << endl;
+                    cout << " " << endl;
+                }
+            }
+            if ( rerolldice == 2 ) {
+                    if ( allowedtoroll2 < 2 ) {
+                        dice2 = ( 1 + rand() % 6 );
+                        cout << "Dice Two: ";
+                        cout << dice2 << endl;
+                        allowedtoroll2 = allowedtoroll2++;
+                    }
+                else {
+                    cout << "You can not roll that dice any more" << endl;
+                        cout << " " << endl;
+                    }
+                }
+            if ( rerolldice == 3 ) {
+                if ( allowedtoroll3 < 2 ) {
+                    dice3 = ( 1 + rand() % 6 );
+                    cout << "Dice Three: ";
+                    cout << dice3 << endl;
+                    allowedtoroll3 = allowedtoroll3++;
+                }
+                else {
+                    cout << "You can not roll this dice any more" << endl;
+                    cout << " " << endl;
+                }
+            }
+            if ( rerolldice == 4 ) {
+                if ( allowedtoroll4 < 2 ) {
+                    dice4 = ( 1 + rand() % 6 );
+                    cout << "Dice Four: ";
+                    cout << dice4 << endl;
+                }
+            }
+            if ( rerolldice == 5 ) {
+                if ( allowedtoroll5 < 2 ) {
+                    dice5 = ( 1 + rand() % 6 );
+                    cout << "Dice Five: ";
+                    cout << dice5 << endl;
+                }
+                else {
+                    cout << "You can not roll this dice any more" << endl;
+                    cout << " " << endl;
+                }
             }
         }
-        if ( rerolldice == 3 ) {
-            if ( allowedtoroll3 < 2 ) {
-                dice3 = ( 1 + rand() % 6 );
-                cout << "Dice Three: ";
-                cout << dice3 << endl;
-                allowedtoroll3 = allowedtoroll3++;
-            }
-            else {
-                cout << "You can not roll this dice any more" << endl;
-                cout << " " << endl;
-            }
-        }
-        if ( rerolldice == 4 ) {
-            if ( allowedtoroll4 < 2 ) {
-                dice4 = ( 1 + rand() % 6 );
-                cout << "Dice Four: ";
-                cout << dice4 << endl;
-            }
-        }
-        if ( rerolldice == 5 ) {
-            if ( allowedtoroll5 < 2 ) {
-                dice5 = ( 1 + rand() % 6 );
-                cout << "Dice Five: ";
-                cout << dice5 << endl;
-            }
-            else {
-                cout << "You can not roll this dice any more" << endl;
-                cout << " " << endl;
-            }
-        }
-        if ( rerolldice == 9 ) {
+        if ( diceorcal == "exit" ) {
             exit (EXIT_SUCCESS);
         }
-        if ( rerolldice == 8 ) {
-            loopbreak = 1; //Breaks the loop
+        if ( diceorcal == "calculate") {
+            loopbreak = 0; //Breaks the loop
             cout << "Current numbers rolled:" << endl;
             cout << dice1;
             cout << " ";
@@ -174,7 +173,6 @@ int main()
                 else if ( canUsecatones > 0 ){
                     cout << "You've already used that catagory!" << endl;
                 }
-
             }
             else if ( scoresect == twos ) {
                 if ( canUsecattwos == 0 ){
@@ -231,6 +229,7 @@ int main()
                     if (dice4==5) catfives=catfives+5;
                     if (dice5==5) catfives=catfives+5;
                     cout << catfives << endl;
+                    canUsecatfives++;
                 }
                 else if ( canUsecatfives > 0 ){
                     cout << "You've already used this catagory!" << endl;
@@ -245,12 +244,14 @@ int main()
                     if (dice3==6) catsixes=catsixes+6;
                     if (dice4==6) catsixes=catsixes+6;
                     if (dice5==6) catsixes=catsixes+6;
-            cout << catsixes << endl;
+                    cout << catsixes << endl;
+                    canUsecatsixes++;
                 }
             else if ( canUsecatsixes > 0 ){
                 cout << "You've already used this catagory!" << endl;
                 }
             }
+            loopbreak=0;
         }
     }
 
