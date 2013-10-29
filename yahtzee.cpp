@@ -224,6 +224,7 @@ int main()
             }
             else if ( scoresect == fives ) {
                 if ( canUsecatfives == 0 ){
+                    catfives=0;
                     if (dice1==5) catfives=catfives+5;
                     if (dice2==5) catfives=catfives+5;
                     if (dice3==5) catfives=catfives+5;
@@ -238,6 +239,7 @@ int main()
             }
             else if ( scoresect == sixes ) {
                 if ( canUsecatsixes == 0 ){
+                    catsixes=0;
                     if (dice1==6) catsixes=catsixes+6;
                     if (dice2==6) catsixes=catsixes+6;
                     if (dice3==6) catsixes=catsixes+6;
