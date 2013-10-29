@@ -245,7 +245,7 @@ int main()
                     if (dice5==6) catsixes=catsixes+6;
             cout << catsixes << endl;
                 }
-            else if ( canUsecatsixes == 0 ){
+            else if ( canUsecatsixes > 0 ){
                 cout << "You've already used this catagory!" << endl;
                 }
             }
@@ -254,3 +254,4 @@ int main()
 
     return 0;
 }
+
