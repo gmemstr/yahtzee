@@ -1,7 +1,7 @@
 /*
-| Yahtzee program           |
-| Written by Gabriel Simmer |
-| Broke it - again!         |
+| Yahtzee program                |
+| Written by Gabriel Simmer      |
+| Loops!                         |
 */
 
 #include <iostream>
@@ -49,6 +49,8 @@ int main()
     int catlocked5 = 0;
     int catlocked6 = 0;
     int rerolloop = 0;
+    int redoCal = 0;
+    int calRedo = 1;
     loopbreak = 0;
     string aces = "aces";
     string twos = "twos";
@@ -156,12 +158,12 @@ int main()
                 }
                 if ( rerolldice == 9 )
                 {
-                    int canUsecatones = 0;
-                    int canUsecattwos = 0;
-                    int canUsecatthrees = 0;
-                    int canUsecatfours = 0;
-                    int canUsecatfives = 0;
-                    int canUsecatsixes = 0;
+                    calRedo = 1;
+                    allowedtoroll1 = 0;
+                    allowedtoroll2 = 0;
+                    allowedtoroll3 = 0;
+                    allowedtoroll4 = 0;
+                    allowedtoroll5 = 0;
                     rerolloop = 1;
                     cout << "Current numbers rolled:" << endl;
                     cout << dice1;
@@ -178,6 +180,417 @@ int main()
                     cout << "aces, twos, thress, fours, fives, or sixes?" << endl;
                     cin >> scoresect; //Choice strings
                     if ( scoresect == aces )
+                    {
+                        if ( canUsecatones == 0 )
+                        {
+                            catones=0;
+                            if (dice1==1) catones++;
+                            if (dice2==1) catones++;
+                            if (dice3==1) catones++;
+                            if (dice4==1) catones++;
+                            if (dice5==1) catones++;
+                            cout << catones << endl;
+                            canUsecatones++;
+                        }
+                        else if ( canUsecatones > 0 )
+                        {
+                            cout << "You've already used that catagory!" << endl;
+                            redoCal = 1;
+                        }
+                    }
+                    else if ( scoresect == twos )
+                    {
+                        if ( canUsecattwos == 0 )
+                        {
+                            cattwos=0;
+                            if (dice1==2) cattwos=cattwos+2;
+                            if (dice2==2) cattwos=cattwos+2;
+                            if (dice3==2) cattwos=cattwos+2;
+                            if (dice4==2) cattwos=cattwos+2;
+                            if (dice5==2) cattwos=cattwos+2;
+                            cout << cattwos << endl;
+                            canUsecattwos++;
+                        }
+                        else if ( canUsecattwos > 0 )
+                        {
+                            cout << "You've already used this catagory!" << endl;
+                            redoCal = 1;
+                        }
+                    }
+                    if ( scoresect == threes )
+                    {
+                        if ( canUsecatthrees == 0 )
+                        {
+                            catthrees=0;
+                            if (dice1==3) catthrees=catthrees+3;
+                            if (dice2==3) catthrees=catthrees+3;
+                            if (dice3==3) catthrees=catthrees+3;
+                            if (dice4==3) catthrees=catthrees+3;
+                            if (dice5==3) catthrees=catthrees+3;
+                            cout << catthrees << endl;
+                            canUsecatthrees++;
+                        }
+                        else if ( canUsecatthrees > 0 )
+                        {
+                            cout << "You've already used this catagory!" << endl;
+                            redoCal = 1;
+                        }
+                    }
+
+                    else if ( scoresect == fours )
+                    {
+                        if ( canUsecatfours == 0 )
+                        {
+                            catfours=0;
+                            if (dice1==4) catfours=catfours+4;
+                            if (dice2==4) catfours=catfours+4;
+                            if (dice3==4) catfours=catfours+4;
+                            if (dice4==4) catfours=catfours+4;
+                            if (dice5==4) catfours=catfours+4;
+                            cout << catfours << endl;
+                            canUsecatfours++;
+                        }
+                        else if ( canUsecatfours > 0 )
+                        {
+                            cout << "You've already used this catagory!" << endl;
+                            redoCal = 1;
+                        }
+                    }
+                    else if ( scoresect == fives )
+                    {
+                        if ( canUsecatfives == 0 )
+                        {
+                            catfives=0;
+                            if (dice1==5) catfives=catfives+5;
+                            if (dice2==5) catfives=catfives+5;
+                            if (dice3==5) catfives=catfives+5;
+                            if (dice4==5) catfives=catfives+5;
+                            if (dice5==5) catfives=catfives+5;
+                            cout << catfives << endl;
+                            canUsecatfives++;
+                        }
+                        else if ( canUsecatfives > 0 )
+                        {
+                            cout << "You've already used this catagory!" << endl;
+                            redoCal = 1;
+                        }
+
+                    }
+                    else if ( scoresect == sixes )
+                    {
+                        if ( canUsecatsixes == 0 )
+                        {
+                            catsixes=0;
+                            if (dice1==6) catsixes=catsixes+6;
+                            if (dice2==6) catsixes=catsixes+6;
+                            if (dice3==6) catsixes=catsixes+6;
+                            if (dice4==6) catsixes=catsixes+6;
+                            if (dice5==6) catsixes=catsixes+6;
+                            cout << catsixes << endl;
+                            canUsecatsixes++;
+                        }
+                        else if ( canUsecatsixes > 0 )
+                        {
+                            cout << "You've already used this catagory!" << endl;
+                            redoCal = 1;
+                        }
+                    }
+                    if ( redoCal == 1 )
+                    {
+                        while ( calRedo = 1 )
+                        {
+                            cout << "Current numbers rolled:" << endl;
+                            cout << dice1;
+                            cout << " ";
+                            cout << dice2;
+                            cout << " ";
+                            cout << dice3;
+                            cout << " ";
+                            cout << dice4;
+                            cout << " ";
+                            cout << dice5;
+                            cout << " " << endl;
+                            cout << "Score to which category?" << endl;
+                            cout << "aces, twos, thress, fours, fives, or sixes?" << endl;
+                            cin >> scoresect; //Choice strings
+                            if ( scoresect == aces )   //Thanks to Mr. Last for the help with the catagories!
+                            {
+                                if ( canUsecatones == 0 )
+                                {
+                                    catones=0;
+                                    if (dice1==1) catones++;
+                                    if (dice2==1) catones++;
+                                    if (dice3==1) catones++;
+                                    if (dice4==1) catones++;
+                                    if (dice5==1) catones++;
+                                    cout << catones << endl;
+                                    canUsecatones++;
+                                }
+                                else if ( canUsecatones > 0 )
+                                {
+                                    cout << "You've already used that catagory!" << endl;
+                                }
+                            }
+                            else if ( scoresect == twos )
+                            {
+                                if ( canUsecattwos == 0 )
+                                {
+                                    cattwos=0;
+                                    if (dice1==2) cattwos=cattwos+2;
+                                    if (dice2==2) cattwos=cattwos+2;
+                                    if (dice3==2) cattwos=cattwos+2;
+                                    if (dice4==2) cattwos=cattwos+2;
+                                    if (dice5==2) cattwos=cattwos+2;
+                                    cout << cattwos << endl;
+                                    canUsecattwos++;
+                                }
+                                else if ( canUsecattwos > 0 )
+                                {
+                                    cout << "You've already used this catagory!" << endl;
+                                }
+                            }
+                            if ( scoresect == threes )
+                            {
+                                if ( canUsecatthrees == 0 )
+                                {
+                                    catthrees=0;
+                                    if (dice1==3) catthrees=catthrees+3;
+                                    if (dice2==3) catthrees=catthrees+3;
+                                    if (dice3==3) catthrees=catthrees+3;
+                                    if (dice4==3) catthrees=catthrees+3;
+                                    if (dice5==3) catthrees=catthrees+3;
+                                    cout << catthrees << endl;
+                                    canUsecatthrees++;
+                                }
+                                else if ( canUsecatthrees > 0 )
+                                {
+                                    cout << "You've already used this catagory!" << endl;
+                                }
+                            }
+
+                            else if ( scoresect == fours )
+                            {
+                                if ( canUsecatfours == 0 )
+                                {
+                                    catfours=0;
+                                    if (dice1==4) catfours=catfours+4;
+                                    if (dice2==4) catfours=catfours+4;
+                                    if (dice3==4) catfours=catfours+4;
+                                    if (dice4==4) catfours=catfours+4;
+                                    if (dice5==4) catfours=catfours+4;
+                                    cout << catfours << endl;
+                                    canUsecatfours++;
+                                }
+                                else if ( canUsecatfours > 0 )
+                                {
+                                    cout << "You've already used this catagory!" << endl;
+                                }
+                            }
+                            else if ( scoresect == fives )
+                            {
+                                if ( canUsecatfives == 0 )
+                                {
+                                    catfives=0;
+                                    if (dice1==5) catfives=catfives+5;
+                                    if (dice2==5) catfives=catfives+5;
+                                    if (dice3==5) catfives=catfives+5;
+                                    if (dice4==5) catfives=catfives+5;
+                                    if (dice5==5) catfives=catfives+5;
+                                    cout << catfives << endl;
+                                    canUsecatfives++;
+                                }
+                                else if ( canUsecatfives > 0 )
+                                {
+                                    cout << "You've already used this catagory!" << endl;
+                                }
+                            }
+                            else if ( scoresect == sixes )
+                            {
+                                if ( canUsecatsixes == 0 )
+                                {
+                                    catsixes=0;
+                                    if (dice1==6) catsixes=catsixes+6;
+                                    if (dice2==6) catsixes=catsixes+6;
+                                    if (dice3==6) catsixes=catsixes+6;
+                                    if (dice4==6) catsixes=catsixes+6;
+                                    if (dice5==6) catsixes=catsixes+6;
+                                    cout << catsixes << endl;
+                                    canUsecatsixes++;
+                                }
+                                else if ( canUsecatsixes > 0 )
+                                {
+                                    cout << "You've already used this catagory!" << endl;
+                                }
+                            }
+                            calRedo = 0;
+                        }
+                    }
+                }
+            }
+            rerolloop = 0;
+        }
+        if ( diceorcal == "exit" )
+        {
+            exit (EXIT_SUCCESS);
+        }
+        if ( diceorcal == "calculate" )
+        {
+            calRedo = 1;
+            allowedtoroll1 = 0;
+            allowedtoroll2 = 0;
+            allowedtoroll3 = 0;
+            allowedtoroll4 = 0;
+            allowedtoroll5 = 0;
+            rerolloop = 1;
+            cout << "Current numbers rolled:" << endl;
+            cout << dice1;
+            cout << " ";
+            cout << dice2;
+            cout << " ";
+            cout << dice3;
+            cout << " ";
+            cout << dice4;
+            cout << " ";
+            cout << dice5;
+            cout << " " << endl;
+            cout << "Score to which category?" << endl;
+            cout << "aces, twos, thress, fours, fives, or sixes?" << endl;
+            cin >> scoresect; //Choice strings
+            if ( scoresect == aces )
+            {
+                if ( canUsecatones == 0 )
+                {
+                    catones=0;
+                    if (dice1==1) catones++;
+                    if (dice2==1) catones++;
+                    if (dice3==1) catones++;
+                    if (dice4==1) catones++;
+                    if (dice5==1) catones++;
+                    cout << catones << endl;
+                    canUsecatones++;
+                }
+                else if ( canUsecatones > 0 )
+                {
+                    cout << "You've already used that catagory!" << endl;
+                    redoCal = 1;
+                }
+            }
+            else if ( scoresect == twos )
+            {
+                if ( canUsecattwos == 0 )
+                {
+                    cattwos=0;
+                    if (dice1==2) cattwos=cattwos+2;
+                    if (dice2==2) cattwos=cattwos+2;
+                    if (dice3==2) cattwos=cattwos+2;
+                    if (dice4==2) cattwos=cattwos+2;
+                    if (dice5==2) cattwos=cattwos+2;
+                    cout << cattwos << endl;
+                    canUsecattwos++;
+                }
+                else if ( canUsecattwos > 0 )
+                {
+                    cout << "You've already used this catagory!" << endl;
+                    redoCal = 1;
+                }
+            }
+            if ( scoresect == threes )
+            {
+                if ( canUsecatthrees == 0 )
+                {
+                    catthrees=0;
+                    if (dice1==3) catthrees=catthrees+3;
+                    if (dice2==3) catthrees=catthrees+3;
+                    if (dice3==3) catthrees=catthrees+3;
+                    if (dice4==3) catthrees=catthrees+3;
+                    if (dice5==3) catthrees=catthrees+3;
+                    cout << catthrees << endl;
+                    canUsecatthrees++;
+                }
+                else if ( canUsecatthrees > 0 )
+                {
+                    cout << "You've already used this catagory!" << endl;
+                    redoCal = 1;
+                }
+            }
+
+            else if ( scoresect == fours )
+            {
+                if ( canUsecatfours == 0 )
+                {
+                    catfours=0;
+                    if (dice1==4) catfours=catfours+4;
+                    if (dice2==4) catfours=catfours+4;
+                    if (dice3==4) catfours=catfours+4;
+                    if (dice4==4) catfours=catfours+4;
+                    if (dice5==4) catfours=catfours+4;
+                    cout << catfours << endl;
+                    canUsecatfours++;
+                }
+                else if ( canUsecatfours > 0 )
+                {
+                    cout << "You've already used this catagory!" << endl;
+                    redoCal = 1;
+                }
+            }
+            else if ( scoresect == fives )
+            {
+                if ( canUsecatfives == 0 )
+                {
+                    catfives=0;
+                    if (dice1==5) catfives=catfives+5;
+                    if (dice2==5) catfives=catfives+5;
+                    if (dice3==5) catfives=catfives+5;
+                    if (dice4==5) catfives=catfives+5;
+                    if (dice5==5) catfives=catfives+5;
+                    cout << catfives << endl;
+                    canUsecatfives++;
+                }
+                else if ( canUsecatfives > 0 )
+                {
+                    cout << "You've already used this catagory!" << endl;
+                    redoCal = 1;
+                }
+
+            }
+            else if ( scoresect == sixes )
+            {
+                if ( canUsecatsixes == 0 )
+                {
+                    catsixes=0;
+                    if (dice1==6) catsixes=catsixes+6;
+                    if (dice2==6) catsixes=catsixes+6;
+                    if (dice3==6) catsixes=catsixes+6;
+                    if (dice4==6) catsixes=catsixes+6;
+                    if (dice5==6) catsixes=catsixes+6;
+                    cout << catsixes << endl;
+                    canUsecatsixes++;
+                }
+                else if ( canUsecatsixes > 0 )
+                {
+                    cout << "You've already used this catagory!" << endl;
+                    redoCal = 1;
+                }
+            }
+            if ( redoCal == 1 )
+            {
+                while ( calRedo = 1 )
+                {
+                    cout << "Current numbers rolled:" << endl;
+                    cout << dice1;
+                    cout << " ";
+                    cout << dice2;
+                    cout << " ";
+                    cout << dice3;
+                    cout << " ";
+                    cout << dice4;
+                    cout << " ";
+                    cout << dice5;
+                    cout << " " << endl;
+                    cout << "Score to which category?" << endl;
+                    cout << "aces, twos, thress, fours, fives, or sixes?" << endl;
+                    cin >> scoresect; //Choice strings
+                    if ( scoresect == aces )   //Thanks to Mr. Last for the help with the catagories!
                     {
                         if ( canUsecatones == 0 )
                         {
@@ -267,7 +680,6 @@ int main()
                         {
                             cout << "You've already used this catagory!" << endl;
                         }
-
                     }
                     else if ( scoresect == sixes )
                     {
@@ -287,141 +699,9 @@ int main()
                             cout << "You've already used this catagory!" << endl;
                         }
                     }
+                    calRedo = 0;
                 }
             }
-            rerolloop = 0;
-        }
-        if ( diceorcal == "exit" )
-        {
-            exit (EXIT_SUCCESS);
-        }
-        if ( diceorcal == "calculate" )
-        {
-            cout << "Current numbers rolled:" << endl;
-            cout << dice1;
-            cout << " ";
-            cout << dice2;
-            cout << " ";
-            cout << dice3;
-            cout << " ";
-            cout << dice4;
-            cout << " ";
-            cout << dice5;
-            cout << " " << endl;
-            cout << "Score to which category?" << endl;
-            cout << "aces, twos, thress, fours, fives, or sixes?" << endl;
-            cin >> scoresect; //Choice strings
-            if ( scoresect == aces )   //Thanks to Mr. Last for the help with the catagories!
-            {
-                if ( canUsecatones == 0 )
-                {
-                    catones=0;
-                    if (dice1==1) catones++;
-                    if (dice2==1) catones++;
-                    if (dice3==1) catones++;
-                    if (dice4==1) catones++;
-                    if (dice5==1) catones++;
-                    cout << catones << endl;
-                    canUsecatones++;
-                }
-                else if ( canUsecatones > 0 )
-                {
-                    cout << "You've already used that catagory!" << endl;
-                }
-            }
-            else if ( scoresect == twos )
-            {
-                if ( canUsecattwos == 0 )
-                {
-                    cattwos=0;
-                    if (dice1==2) cattwos=cattwos+2;
-                    if (dice2==2) cattwos=cattwos+2;
-                    if (dice3==2) cattwos=cattwos+2;
-                    if (dice4==2) cattwos=cattwos+2;
-                    if (dice5==2) cattwos=cattwos+2;
-                    cout << cattwos << endl;
-                    canUsecattwos++;
-                }
-                else if ( canUsecattwos > 0 )
-                {
-                    cout << "You've already used this catagory!" << endl;
-                }
-            }
-            if ( scoresect == threes )
-            {
-                if ( canUsecatthrees == 0 )
-                {
-                    catthrees=0;
-                    if (dice1==3) catthrees=catthrees+3;
-                    if (dice2==3) catthrees=catthrees+3;
-                    if (dice3==3) catthrees=catthrees+3;
-                    if (dice4==3) catthrees=catthrees+3;
-                    if (dice5==3) catthrees=catthrees+3;
-                    cout << catthrees << endl;
-                    canUsecatthrees++;
-                }
-                else if ( canUsecatthrees > 0 )
-                {
-                    cout << "You've already used this catagory!" << endl;
-                }
-            }
-
-            else if ( scoresect == fours )
-            {
-                if ( canUsecatfours == 0 )
-                {
-                    catfours=0;
-                    if (dice1==4) catfours=catfours+4;
-                    if (dice2==4) catfours=catfours+4;
-                    if (dice3==4) catfours=catfours+4;
-                    if (dice4==4) catfours=catfours+4;
-                    if (dice5==4) catfours=catfours+4;
-                    cout << catfours << endl;
-                    canUsecatfours++;
-                }
-                else if ( canUsecatfours > 0 )
-                {
-                    cout << "You've already used this catagory!" << endl;
-                }
-            }
-            else if ( scoresect == fives )
-            {
-                if ( canUsecatfives == 0 )
-                {
-                    catfives=0;
-                    if (dice1==5) catfives=catfives+5;
-                    if (dice2==5) catfives=catfives+5;
-                    if (dice3==5) catfives=catfives+5;
-                    if (dice4==5) catfives=catfives+5;
-                    if (dice5==5) catfives=catfives+5;
-                    cout << catfives << endl;
-                    canUsecatfives++;
-                }
-                else if ( canUsecatfives > 0 )
-                {
-                    cout << "You've already used this catagory!" << endl;
-                }
-
-            }
-            else if ( scoresect == sixes )
-            {
-                if ( canUsecatsixes == 0 )
-                {
-                    catsixes=0;
-                    if (dice1==6) catsixes=catsixes+6;
-                    if (dice2==6) catsixes=catsixes+6;
-                    if (dice3==6) catsixes=catsixes+6;
-                    if (dice4==6) catsixes=catsixes+6;
-                    if (dice5==6) catsixes=catsixes+6;
-                    cout << catsixes << endl;
-                    canUsecatsixes++;
-                }
-                else if ( canUsecatsixes > 0 )
-                {
-                    cout << "You've already used this catagory!" << endl;
-                }
-            }
-            loopbreak=0;
         }
     }
 
