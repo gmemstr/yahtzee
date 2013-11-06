@@ -1,4 +1,4 @@
-yahtzee
+Yahtzee
 =======
 
-Yahtzee in the terminal using C++. Windows only right now :(
+Yahtzee in the terminal using C++. Daily updates.
