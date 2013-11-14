@@ -1,7 +1,7 @@
 /*
-| Yahtzee program                |
-| Written by Gabriel Simmer      |
-| Loops!                         |
+| Yahtzee program               |
+| Written by Gabriel Simmer     |
+| Almost-kind-of-nearly-done!   |
 */
 
 #include <iostream>
@@ -51,6 +51,7 @@ int main()
     int rerolloop = 0;
     int redoCal = 0;
     int calRedo = 1;
+    int rerolldice;
     loopbreak = 0;
     string aces = "aces";
     string twos = "twos";
@@ -79,8 +80,7 @@ int main()
         dice5 = (1 + rand() % 6);
         cout << " ";
         cout << dice5 << endl ;
-        int rerolldice;
-        cout << "Use reroll to reroll a dice, or calculate to add up score (exit to exit)." << endl;
+        cout << "Use \"reroll\" to reroll a dice, or \"calculate\" to add up score (exit to exit)." << endl;
         cin >> diceorcal; //Choice for reroll or calculate.
         if ( diceorcal == "reroll" )
         {
@@ -90,16 +90,16 @@ int main()
                 cin >> rerolldice;
                 if ( rerolldice == 1 )
                 {
-                    if ( allowedtoroll1 < 2 )   //So that you can only roll twice
+                    if ( allowedtoroll1 < 2 ) //Fixed more then two rolls bug
                     {
+                        allowedtoroll1 = allowedtoroll1+1;
                         dice1 = (1 + rand() % 6 );
                         cout << "Dice One: ";
                         cout << dice1 << endl;
-                        allowedtoroll1 = allowedtoroll1++;
                     }
-                    else
+                    else if ( allowedtoroll1 == 2 )
                     {
-                        cout << "You can not roll that dice any more." << endl;
+                        cout << "You cannot roll that dice any more." << endl;
                         cout << " " << endl;
                     }
                 }
@@ -110,11 +110,11 @@ int main()
                         dice2 = ( 1 + rand() % 6 );
                         cout << "Dice Two: ";
                         cout << dice2 << endl;
-                        allowedtoroll2 = allowedtoroll2++;
+                        allowedtoroll2 = allowedtoroll2+1;
                     }
                     else
                     {
-                        cout << "You can not roll that dice any more" << endl;
+                        cout << "You cannot roll that dice any more" << endl;
                         cout << " " << endl;
                     }
                 }
@@ -125,11 +125,11 @@ int main()
                         dice3 = ( 1 + rand() % 6 );
                         cout << "Dice Three: ";
                         cout << dice3 << endl;
-                        allowedtoroll3 = allowedtoroll3++;
+                        allowedtoroll3 = allowedtoroll3+1;
                     }
                     else
                     {
-                        cout << "You can not roll this dice any more" << endl;
+                        cout << "You cannot roll this dice any more" << endl;
                         cout << " " << endl;
                     }
                 }
@@ -140,6 +140,7 @@ int main()
                         dice4 = ( 1 + rand() % 6 );
                         cout << "Dice Four: ";
                         cout << dice4 << endl;
+                        allowedtoroll4 = allowedtoroll4+1;
                     }
                 }
                 if ( rerolldice == 5 )
@@ -149,10 +150,11 @@ int main()
                         dice5 = ( 1 + rand() % 6 );
                         cout << "Dice Five: ";
                         cout << dice5 << endl;
+                        allowedtoroll5 = allowedtoroll5+1;
                     }
                     else
                     {
-                        cout << "You can not roll this dice any more" << endl;
+                        cout << "You cannot roll this dice any more" << endl;
                         cout << " " << endl;
                     }
                 }
@@ -421,8 +423,8 @@ int main()
                                 {
                                     cout << "You've already used this catagory!" << endl;
                                 }
+                                calRedo = 0;
                             }
-                            calRedo = 0;
                         }
                     }
                 }
@@ -707,4 +709,3 @@ int main()
 
     return 0;
 }
-
