@@ -19,11 +19,14 @@ int main()
 {
 	 int dice[5] = {0,0,0,0};
 	 
-	 for(int i = 0; i > 5; i+1)
+	 for(int i = 0; i < 5; i+=1)
 	 {
 		 dice[i] = roll();
-		 std::cout << dice[i] + " ";
+		 cout << dice[i];
+		 cout << " ";
 	 }
+	 
+	 //DEBUG cout << dice[1];
 	 
 return 0;
 }
