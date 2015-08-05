@@ -7,5 +7,14 @@ Yahtzee in the terminal using C++.
 ```
 Rewriting entire project to be more effecient.
 
-Next update: Unknown
+ETA: Unknown
+```
+
+## Compiling:
+```
+git clone https://github.com/gmemstr/yahtzee.git
+
+cd yahtzee/src/
+
+g++ Main.cpp -o Yahtzee.exe
 ```
