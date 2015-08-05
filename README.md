@@ -1,8 +1,11 @@
 Yahtzee
 =======
 
-Yahtzee in the terminal using C++. Daily updates.
+Yahtzee in the terminal using C++. 
 
-Download the release:
----
-http://blog.gamemaster.uni.me/downloads
+## Current Status: 
+```
+Rewriting entire project to be more effecient.
+
+Next update: Unknown
+```

@@ -1,7 +1,6 @@
 /*
-| Yahtzee program               |
-| Written by Gabriel Simmer     |
-| Almost-kind-of-nearly-done!   |
+| Yahtzee Legacy Sourcecode
+| Decprecated as of August 4, 2015
 */
 
 #include <iostream>
